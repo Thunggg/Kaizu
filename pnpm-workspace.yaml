@@ -1,0 +1,16 @@
+packages:
+  - 'packages/*'
+  - 'backend'
+  - 'backend-e2e'
+  - 'frontend'
+  - 'frontend-e2e'
+allowBuilds:
+  '@nestjs/core': true
+  '@parcel/watcher': true
+  '@prisma/engines': true
+  '@swc/core': true
+  less: true
+  nx: true
+  prisma: true
+  sharp: true
+  unrs-resolver: true
