@@ -2,13 +2,13 @@ name: kaizu
 
 services:
   postgres:
-    image: postgres:16
+    image: postgis/postgis:16-3.4
     restart: always
 
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
-      POSTGRES_DB: ecommerce_monorepo
+      POSTGRES_DB: kaizu
 
     ports:
       - '5433:5432'
@@ -40,7 +40,7 @@ services:
     env_file:
       - backend/.env
     environment:
-      DATABASE_URL: postgresql://postgres:123@postgres:5432/ecommerce_monorepo
+      DATABASE_URL: postgresql://postgres:123@postgres:5432/kaizu
       PORT: 3000
 
   frontend:
